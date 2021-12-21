@@ -13,6 +13,5 @@ public class VariableDemo1
 		System.out.println(gender);
 		System.out.println(salary);
 		System.out.println(status);
-
 	}
 }
