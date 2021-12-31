@@ -14,19 +14,19 @@ class Addition {
 		return ans;
 	}
 	
-	public int add(int a, int b, int c) {
+	int add(int a, int b, int c) {
 		int ans = a + b + c;
 		System.out.println("Addition of 3 int is : " + ans);
 		return ans;
 	}
 
-	public float add(int a, float b) {
+	protected float add(int a, float b) {
 		float ans = a + b ;
 		System.out.println("Addition of 3 int is : " + ans);
 		return ans;
 	}
 	
-	public float add(float a, int b) {
+	private float add(float a, int b) {
 		float ans = a + b ;
 		System.out.println("Addition of 3 int is : " + ans);
 		return ans;
@@ -49,4 +49,10 @@ class Addition {
 		System.out.println("Addition of 2 char is : " + ans);
 		return ans;
 	}
+	
+	public String add(int a, String b) {
+		String str = a + b;
+		return str;
+	}
+
 }
