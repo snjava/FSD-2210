@@ -19,7 +19,7 @@ interface I2 {
 interface I3 extends I1, I2 {
 	void m3();
 }
-
+ 
 // b. One class can implements more than one interface.
 class Demo1 implements I1, I2 {
 	public void m1() {
