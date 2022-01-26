@@ -25,7 +25,7 @@ public class LinkedListDemo1 {
 		list.push(111); // is use to add element at the first place of the LinkedList
 		System.out.println(list); // [111, 123, Abc, 1.23]
 		
-		// is use to select/get first element and also removes the last element, 
+		// is use to select/get first element and also removes the first element, 
 		// if first element is not present then it will throw an NoSuchElementException
 		System.out.println("Pop : "+list.pop()); // 111
 		System.out.println(list); // [123, Abc, 1.23]
