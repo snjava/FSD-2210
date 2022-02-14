@@ -38,7 +38,6 @@ class Printer {
 	public  void print(int num) {
 		// 1-19 lines
 		synchronized (this) { // synchronized block
-			// 1-19 lines
 			//20-40 lines
 		}
 		// 41-100 lines
