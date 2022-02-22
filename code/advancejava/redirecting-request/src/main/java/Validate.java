@@ -22,6 +22,8 @@ public class Validate extends HttpServlet {
 			dis.forward(request, response);
 		} else {
 			System.err.println("Invalid User");
+			response.sendRedirect("signin-fail");
+			//response.sendRedirect("https://www.google.com");
 		}
 	}
 
