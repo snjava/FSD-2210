@@ -22,5 +22,3 @@
 		<h2>This is an another Message</h2>
 	</body>
 </html>
-
-This is the test message
