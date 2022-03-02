@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 public class SaveInfo extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// DB connection code.
-		
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String contact = request.getParameter("contact");
@@ -34,7 +32,7 @@ public class SaveInfo extends HttpServlet {
 		System.out.println("Year : " + year);
 		
 		try {
-			
+			// DB connection code.
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
