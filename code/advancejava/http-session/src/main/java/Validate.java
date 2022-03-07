@@ -20,7 +20,7 @@ public class Validate extends HttpServlet {
 			// 2. set User Name inside session
 			session.setAttribute("user", userName);
 			// 3. redirect to home page
-			//response.sendRedirect("home.jsp");
+			response.sendRedirect("home.jsp");
 		}
 		else {
 			// 1. Redirect to Login page with error
