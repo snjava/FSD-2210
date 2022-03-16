@@ -30,7 +30,7 @@
 		}
 	%>
 	<h3 style="color: <%=color%>"> <%= msg %> </h3>
-	<form action="new-contact">
+	<form action="new-contact" method="post">
 	 	Enter First Name : <input type="text" name="fname"><br><br>
 	 	Enter Last Name : <input type="text" name="lname"><br><br>
 	 	Enter Contact : <input type="text" name="contact"><br><br>

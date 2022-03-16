@@ -12,7 +12,6 @@ import model.ContactModel;
 
 @WebServlet("/new-contact")
 public class SaveContact extends HttpServlet {
-
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String fname = request.getParameter("fname");
 		String lname = request.getParameter("lname");
