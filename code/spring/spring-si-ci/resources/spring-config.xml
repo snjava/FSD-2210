@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!--     Setter Injection-(SI)       --> 
+	<bean id="stud" class="com.institute.Student" scope="singleton">
+		<property name="id" value="23"></property>
+		<property name="name" value="Abc"></property>
+		<property name="contact">
+			<list>
+				<value>567567567</value>
+				<value>987978978</value>
+			</list>
+		</property>
+	</bean>
+
+	<!--     Constructor Injection-(CI)       --> 
+	<bean id="emp" class="com.institute.Employee" scope="singleton">
+		<constructor-arg value="121"></constructor-arg>
+		<constructor-arg value="Xyz"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>7788998877</value>
+				<value>9989098765</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+
+</beans>
