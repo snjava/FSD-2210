@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="ad" class="com.institute.bean.Address">
+		<property name="city" value="Pune"></property>
+		<property name="country" value="India"></property>
+	</bean>
+	
+	<bean id="edu" class="com.institute.bean.Education">
+		<constructor-arg value="BE"></constructor-arg>
+		<constructor-arg value="77"></constructor-arg>
+	</bean>
+	
+	<bean id="emp1" class="com.institute.bean.Employee" autowire="byType">
+		<property name="id" value="122"></property>
+		<property name="name" value="Test1"></property>
+	</bean>
+	
+	
+	<bean id="emp" class="com.institute.bean.Employee">
+		<property name="id" value="121"></property>
+		<property name="name" value="Abc"></property>
+		<property name="addr" ref="ad"></property> <!-- DI by SI -->
+		<property name="higherEdu" ref="edu" ></property> <!-- DI by SI -->
+	</bean>
+	
+	
+	<bean id="stud" class="com.institute.bean.Student">
+		<constructor-arg value="444"></constructor-arg>
+		<constructor-arg value="Xyz"></constructor-arg>
+		<constructor-arg ref="ad"></constructor-arg> <!-- DI by CI -->
+		<constructor-arg ref="edu"></constructor-arg> <!-- DI by CI -->
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
