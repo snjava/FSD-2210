@@ -1,7 +1,10 @@
 package org.institute.repository;
 
+import java.util.List;
+
 import org.institute.bean.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -25,5 +28,21 @@ public class ContactRepository {
 		return template.update("delete from contact where id=?", id);
 	}
 	
+	public List getAllContactByList() { // List<Map>
+		return template.queryForList("select * from contact");
+	}
+	
+	public List<Contact> getAllContact() { // List<Contact>
+		return template.query("select * from contact", new BeanPropertyRowMapper(Contact.class));
+	}
 	
 }
+
+
+
+
+
+
+
+
+

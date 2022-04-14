@@ -6,6 +6,7 @@ import org.institute.bean.Contact;
 import org.institute.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -62,10 +63,17 @@ public class ContactController {
 		}
 	}
 
-	/*
-	 * public List<Contact> getAllContact() {
-	 * 
-	 * }
-	 */
+	@GetMapping("/get-contact-list")
+	public List getAllContactList() {
+		return repository.getAllContactByList();
+	}
+	  
+	
+	@GetMapping("/get-all-contact")
+	public List<Contact> getAllContact() {
+	  return repository.getAllContact();
+	}
+	
+	 
 
 }
