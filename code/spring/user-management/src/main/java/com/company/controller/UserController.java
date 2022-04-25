@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.company.entity.User;
+import com.company.entity.UserAnswer;
 import com.company.serivce.UserService;
 
 @RestController
@@ -34,4 +35,18 @@ public class UserController {
 	}
 	
 	
+	@GetMapping("/get-user-answer")
+	public UserAnswer getUserAnswer(@RequestParam("id") int id) {
+		return service.getUserAnswer(id);
+	}
+	
 }
+
+
+
+
+
+
+
+
+
